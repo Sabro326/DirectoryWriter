@@ -1,15 +1,13 @@
-/* リセット */
 *
 {
     margin: 0;
     padding: 0;
 }
 
-#wrapper
-{
-    width: 80%;
-    margin: 0 auto 0 20px;
+.block {
+    margin-top: 10px;
 }
+
 body
 {
     background-color: rgb(27, 27, 27);
@@ -19,8 +17,56 @@ body
 .site_header {
     /*背景の設定*/
     position: relative;
-    height: 80px;
+    height: 70px;
 	background-color: rgb(37, 37, 37);
-    font-size: 26px;
+    font-size: 24px;
     font-family: Century Gothic;
+    align-items: center;
+}
+
+.header_link {
+    position: absolute; top: -2px; right: 10px;
+}
+
+.textarea-output {
+    border-radius: 0.67em;
+    border: rgba(0, 0, 0, 0);
+    box-shadow: -5px 0px rgb(22, 22, 22);
+    position: fixed; right: 10px; bottom: 12px;
+    height: 600px;
+    width: 400px;
+    background-color: rgb(37, 37, 37);
+    padding: 20px;
+
+    color: rgb(209, 209, 209);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.accordion .child {
+    list-style: none;
+    margin:0;
+}
+
+label {
+    cursor: pointer;
+    background-color: rgb(76, 112, 106);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px 10px 20px;
+    position: relative; left: 50px; top: 20px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle + .child {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.toggle:checked + .child {
+    max-height: 500px;
+    transition: all 2s ease-in;
 }
