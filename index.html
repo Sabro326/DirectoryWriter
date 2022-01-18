@@ -11,25 +11,68 @@
         <!--ここからヘッダー-->
         <header>
             <div class="site_header">
-                <div class="site_header">
-                    <h1>&nbsp;&nbsp;&nbsp;Directory Writer</h1>
-                    <div class="header_link">
-                      <a href="https://github.com/Hukino/DirectoryWriter" target="_blank">
+                <h1>&nbsp;&nbsp;&nbsp;Directory Writer</h1>
+                <div class="header_link">
+                    <a href="https://github.com/Hukino/DirectoryWriter" target="_blank">
                         <img src="img/github.svg" width="75" height="75">
-                      </a>
-                    </div>
+                    </a>
                 </div>
-
             </div>
         </header>
         <!--ヘッダー終わり-->
 
         <!--本文だよ-->
         <body>
-            <textarea class="textarea-output" readonly name="ressult">test</textarea>
+            <textarea class="textarea-output" readonly name="ressult" id="outputarea">test</textarea>
+            <form id="form1" action="" method="get">
+              <input type="text" spellcheck=false id="rootname">
+            </form>
 
-            <br>
+            <section class="container max-width-sm">
 
+                <ul class="cd-accordion cd-accordion--animated margin-top-lg margin-bottom-lg">
+                  <li class="cd-accordion__item cd-accordion__item--has-children">
+                    <input class="cd-accordion__input" type="checkbox" name ="group-1" id="group-1">
+                    <label class="cd-accordion__label cd-accordion__label--icon-folder" for="group-1"><p id="root">Group-1</p></label>
+
+                    <ul class="cd-accordion__sub cd-accordion__sub--l1">
+                      <li class="cd-accordion__item cd-accordion__item--has-children">
+                        <input class="cd-accordion__input" type="checkbox" name ="sub-group-1" id="sub-group-1">
+                        <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-1"><span>hoge</span></label>
+
+                        <ul class="cd-accordion__sub cd-accordion__sub--l2">
+                          <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                          <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                          <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                        </ul>
+                      </li>
+
+                      <li class="cd-accordion__item cd-accordion__item--has-children">
+                        <input class="cd-accordion__input" type="checkbox" name ="sub-group-2" id="sub-group-2">
+                        <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-2"><span>hoge</span></label>
+
+                        <ul class="cd-accordion__sub cd-accordion__sub--l2">
+                          <li class="cd-accordion__item cd-accordion__item--has-children">
+                            <input class="cd-accordion__input" type="checkbox" name ="sub-group-level-3" id="sub-group-level-3">
+                            <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-level-3"><span>hogehoge</span></label>
+
+                            <ul class="cd-accordion__sub cd-accordion__sub--l3">
+                              <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehogehoge</span></a></li>
+                              <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehogehoge</span></a></li>
+                            </ul>
+                          </li>
+                          <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                        </ul>
+                      </li>
+                      <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                      <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img"><span>hogehoge</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </section>
+              <script src="util.js"></script> <!-- util functions included in the CodyHouse framework -->
+              <script src="main.js"></script>
         </body>
         <!--本文だよ-->
 
