@@ -23,17 +23,21 @@
 
         <!--本文だよ-->
         <body>
+            <!--textarea-->
             <textarea class="textarea-output" readonly name="ressult" id="outputarea">test</textarea>
+
+            <!--textbox-->
             <form id="form1" action="" method="get">
-              <input type="text" spellcheck=false id="rootname">
+              <input type="text" spellcheck=false id="rootname" onchange="txtbox_change()">
             </form>
 
+            <!--アコーディオンメニュー-->
             <section class="container max-width-sm">
 
                 <ul class="cd-accordion cd-accordion--animated margin-top-lg margin-bottom-lg">
                   <li class="cd-accordion__item cd-accordion__item--has-children">
                     <input class="cd-accordion__input" type="checkbox" name ="group-1" id="group-1">
-                    <label class="cd-accordion__label cd-accordion__label--icon-folder" for="group-1"><p id="root">Group-1</p></label>
+                    <label class="cd-accordion__label cd-accordion__label--icon-folder" for="group-1"><span id="root">Group-1</span></label>
 
                     <ul class="cd-accordion__sub cd-accordion__sub--l1">
                       <li class="cd-accordion__item cd-accordion__item--has-children">

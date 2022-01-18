@@ -27,14 +27,13 @@
 }());
 
 setTimeout(TextareaSet,10)
-setTimeout(RootNameSet,10)
 
 function TextareaSet() {
 	var root = document.getElementById('root');
-	document.getElementById("outputarea").value = root.textContent;
+	document.getElementById("outputarea").value = root.innerHTML;
 }
 
-function RootNameSet() {
-	var root = document.getElementById('rootname').Value;
-	document.getElementById("root").innerHTML = root;
+function txtbox_change() {
+    var root = document.getElementById('rootname').value;
+	document.getElementById("root").textContent = root;
 }
